@@ -127,7 +127,7 @@ def afm_img_to_confocal_frame(M, afm_channel, d_shape, tif_exp=True, label='none
                               0.5) & (ay_ >= -0.5) & (ay_ <= H - 0.5)
     afm_channel_conf = ndi.map_coordinates(
         afm_channel, [ay_, ax_], order=1).astype(np.float32)
-    afm_channel_conf[~inside] = np.nan
+    afm_channel_conf[~inside] = 0
     plt.imshow(afm_channel_conf)
     plt.show()
     if tif_exp:
