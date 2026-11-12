@@ -2,10 +2,10 @@
 
 ## Introduction
 
-SarcoMechProfiler is a Python-based analysis toolkit for finding periodic patterns, normalizing the lengths, and averaging across line profiles of viscoelastic (here, sarcomeres) resulting from AFM mapping.  
+SarcoMechProfiler is a Python-based analysis toolkit for finding periodic patterns, normalizing the lengths, and averaging across line profiles of viscoelastic data (here, sarcomeres) resulting from AFM mapping.  
 Briefly, the following analyses are implemented in the jupyter notebooks:
 
-The example input dataset for this averaging is resulting line profiles drawn over Scale factor for stiffness (E0) and fluidity index (beta) images, using an [ImageJ/Fiji macro](AFM_extract_line_profiles.ijm), from the AFM-based viscoelastic analysis from the [PyFMLab](https://github.com/DyNaMo-INSERM/PyFMlab_DyNaMo). This example excel file consists of E0 and beta of a single sarcomere extracted from a mechananical map from an AFM of the indirect flight muscle of a fly of sls[23-YPet] genotype, used in the manuscript [`example_data`](data/example_data.csv). In this `.csv` file, there is the distance, E0 and beta and file_sac number and date to identify uniquely the experimental file id.
+The example input dataset for this averaging is resulting line profiles drawn over Scale factor for stiffness (E0) and fluidity index (beta) images, using an [ImageJ/Fiji macro](AFM_extract_line_profiles.ijm), from the AFM-based viscoelastic analysis from the [PyFMLab](https://github.com/DyNaMo-INSERM/PyFMlab_DyNaMo). This example excel file consists of E0 and beta of a single sarcomere extracted from a mechananical map from an AFM of the indirect flight muscle of a fly of sls[23-YPet] genotype, used in the manuscript [`example_data`](data/example_data.csv). In this `.csv` file, there is the distance, E0 , beta, file_sarc number, and date to uniquely identify the experimental file id.
 
 - *Normalization and Averaging*: This involves aligning individual sarcomere patterns in E0, normalizing their lengths, and averaging the viscoelastic properties (E0 & beta) over all probed sarcomeres. An example implementation for the test dataset is provided in the [norm_averaging_VE](norm_averaging_VE.ipynb) Jupyter notebook.
 
